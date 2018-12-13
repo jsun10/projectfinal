@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Arch Enemy</title>
+    <link rel="stylesheet" href="css/style.css">
+        <link href="https://fonts.googleapis.com/css?family=Inconsolata|Share+Tech+Mono" rel="stylesheet">
+
+
+<style>
+   
+    
+    body{
+        margin: 0;
+  padding: 0;
+   background-image: url('未标题-3.jpg');
+        
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
+    }
+    
+        a
+{
+  text-decoration: none;
+  color: #232323;
+  
+  transition: color 0.3s ease;
+}
+
+a:hover
+{
+  color: white;
+}
+
+#menuToggle
+{
+  display: block;
+  position: relative;
+  top: 50px;
+  left: 50px;
+  
+  z-index: 1;
+  
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menuToggle input
+{
+  display: block;
+  width: 30px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  background-color: white;
+  cursor: pointer;
+  
+  opacity: 0; 
+  z-index: 2; 
+  
+  -webkit-touch-callout: none;
+}
+
+
+#menuToggle span
+{
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  
+  background: #cdcdcd;
+  border-radius: 3px;
+  
+  z-index: 1;
+  
+  transform-origin: 4px 0px;
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+#menuToggle span:first-child
+{
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+
+#menuToggle input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #232323;
+}
+
+
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+
+#menu
+{
+  position: absolute;
+  width: 180px;
+  margin: -100px 0 0 -50px;
+  padding: 50px;
+  padding-top: 120px;
+  font-family:monospace;
+  background: #585454;
+   opacity:0.6;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  
+  
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#menu li
+{
+  padding: 10px 0;
+  font-size: 20px;
+}
+
+#menuToggle input:checked ~ ul
+{
+  transform: none;
+}
+    
+    .container {
+  margin-top: 140px;
+    margin-left: 230px;
+  display: flex;
+    font-family: 'Lato', sans-serif;}
+  .image-container {
+    perspective: 600px;
+      margin-top:20px;
+    z-index: 1;}
+    .image{
+      animation: spin 4s infinite linear;
+    }
+    .image {
+      display: flex;
+      transition: transform 1s ease-out;
+      transform-style: preserve-3d;
+      cursor: pointer;
+        position: relative;
+    opacity: 0.5;}
+
+      img.side-a {
+        backface-visibility: hidden;
+       
+    
+      }
+
+      .image-desc.side-b {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        transform: rotateY(180deg);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      img {
+        position: relative;
+        width: 300px;
+        height: 200px;
+        object-fit: contain;
+      }
+    
+  
+  @keyframes spin {
+    from {
+      transform: rotateY(0);
+    }
+    to {
+      transform: rotateY(360deg);
+    }
+  }
+
+    
+    h1 {
+        
+        margin-top: -90px;
+        margin-left: 220px;
+        color:white;
+        font-family: 'Share Tech Mono', monospace;
+         font-size:3em;
+
+    
+        
+        
+        
+        
+    }
+    
+    
+    p{
+                font-family: 'Share Tech Mono', monospace;
+         font-size:2em;
+        margin-top: -10px;
+        margin-left: 220px;
+        color:white;
+        
+        
+        
+    }
+    </style>
+     </head>
+    
+    <body>
+    <nav role="navigation">
+  <div id="menuToggle">
+  
+    <input type="checkbox" />
+   
+    <span></span>
+    <span></span>
+    <span></span>
+    
+  
+    <ul id="menu">
+      <a href="file:///Users/sunyuz/Desktop/webpagedesign/index10.html#"><li>My Superhero</li></a>
+      <a href="file:///Users/sunyuz/Desktop/webpagedesign/index6.html#"><li>Origin Story</li></a>
+      <a href="file:///Users/sunyuz/Desktop/webpagedesign/index4.html"><li>City of Residence</li></a>
+      <a href="file:///Users/sunyuz/Desktop/webpagedesign/index7.html"><li>Super Power</li></a>
+
+      <a href="file:///Users/sunyuz/Desktop/webpagedesign/index9.html"><li>Weakness</li></a>
+      <a href="file:///Users/sunyuz/Desktop/webpagedesign/index8.html"><li>Arch Enemy</li></a>
+    </ul>
+  </div>
+</nav>
+        
+        <div class="container">
+  <div class="image-container">
+    <div class="image">
+      <img src="fire-1938_640.jpg" class="side-a" alt="Cat">
+      <div class="image-desc side-b">
+      <img src="fire-1938_640.jpg" class="side-b" alt="Cat">
+          
+      </div>
+    </div>
+  </div>
+</div>
+        <h1> Arch Enemy</h1>
+        <p>Fire God</p>
+
+    </body>
+</html>
+   
+    

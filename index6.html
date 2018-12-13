@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Super Power</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata|Share+Tech+Mono" rel="stylesheet">
+
+<style>
+    
+    body{
+        margin: 0;
+  padding: 0;
+   background-image: url('未标题-3.jpg');
+        
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; }
+    
+    a
+{
+  text-decoration: none;
+  color: #232323;
+  
+  transition: color 0.3s ease;
+}
+
+a:hover
+{
+  color: white;
+}
+
+#menuToggle
+{
+  display: block;
+  position: relative;
+  top: 50px;
+  left: 50px;
+  
+  z-index: 1;
+  
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menuToggle input
+{
+  display: block;
+  width: 30px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  background-color: white;
+  cursor: pointer;
+  
+  opacity: 0; 
+  z-index: 2; 
+  
+  -webkit-touch-callout: none;
+}
+
+
+#menuToggle span
+{
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  
+  background: #cdcdcd;
+  border-radius: 3px;
+  
+  z-index: 1;
+  
+  transform-origin: 4px 0px;
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+#menuToggle span:first-child
+{
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+
+#menuToggle input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #232323;
+}
+
+
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+
+#menu
+{
+  position: absolute;
+  width: 180px;
+  margin: -100px 0 0 -50px;
+  padding: 50px;
+  padding-top: 120px;
+  font-family:monospace;
+  background: #585454;
+   opacity:0.6;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  
+  
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#menu li
+{
+  padding: 10px 0;
+  font-size: 20px;
+}
+
+#menuToggle input:checked ~ ul
+{
+  transform: none;
+}
+        
+       
+    
+
+    p { margin-top: 450px; left:150px;  width: 200px; height:400px;} 
+
+
+
+.one { margin-top: 10px; left: 300px; width:320px; height:220px;  }
+.two { margin-top: 200px; left: 600px;width:320px; height:220px; }
+    .three { margin-top: 300px; left: 400px;width:320px; height:220px; }
+        .four { margin-top: 40px; left: 400px;width:320px; height:220px; }
+            .five { margin-top: 90px; left: 400px;width:320px; height:220px; }
+            .six { margin-top: 400px; left: 400px;width:320px; height:220px; }
+
+    
+    .grid1 {
+        
+        margin-top: 90px; 
+        margin-left: 320px;
+        
+        
+        
+    }
+    
+    .grid2 {
+        
+        margin-top: -350px; 
+        margin-left: 800px;
+        
+        
+        
+    }
+    
+    .grid3 {
+        
+        margin-top: -200px; 
+        margin-left: 700px;
+        
+        
+        
+    }
+    
+    .grid4 {
+        
+        margin-top: 220px; 
+        margin-left: 80px;
+        
+        
+        
+    }
+    
+    
+    .grid5 {
+        
+        margin-top: -610px; 
+        margin-left:700px;
+        
+        
+        
+    }
+    
+    .grid6 {
+        
+        margin-top: 10px; 
+        margin-left: 300px;
+        
+        
+        
+    }
+    
+
+
+    h1 {
+        
+        font-family: 'Share Tech Mono', monospace;
+        color: white;
+        font-size: 4em;
+        
+        margin-top: 20px;
+        margin-left: 190px;
+        
+        
+    }
+    
+    p {
+        font-family: 'Share Tech Mono', monospace;
+        color: white;
+        font-size: 1.5em;
+        
+       
+                width:600px;
+
+        
+        
+    }
+    
+    
+   .container1{
+        
+        
+        margin-top: -280px;
+        margin-left: 760px;
+        
+        
+    }
+    
+    p1{
+        text-align: right;
+        
+        
+    }
+    
+    .container2{
+        
+        
+        margin-top: -780px;
+        margin-left: 70px;
+        
+        
+    }
+    
+    .container3{
+        
+        
+        margin-top: -540px;
+        margin-left: 450px;
+        
+        
+    }
+    
+     .container4{
+        
+        
+        margin-top: -240px;
+        margin-left: 70px;
+        
+        
+    }
+    
+    
+     .container5{
+        
+        
+        margin-top: -680px;
+        margin-left: 670px;
+        
+        
+    }
+    
+    </style>
+</head>
+
+<body>
+        
+    
+<nav role="navigation">
+  <div id="menuToggle">
+  
+    <input type="checkbox" />
+   
+    <span></span>
+    <span></span>
+    <span></span>
+    
+  
+    <ul id="menu">
+     <a href="file:///Users/sunyuz/Desktop/webpagedesign/index10.html#"><li>My Superhero</li></a>
+      <a href="file:///Users/sunyuz/Desktop/webpagedesign/index6.html#"><li>Origin Story</li></a>
+      <a href="file:///Users/sunyuz/Desktop/webpagedesign/index4.html"><li>City of Residence</li></a>
+      <a href="file:///Users/sunyuz/Desktop/webpagedesign/index7.html"><li>Super Power</li></a>
+      <a href="file:///Users/sunyuz/Desktop/webpagedesign/index9.html"><li>Weakness</li></a>
+      <a href="file:///Users/sunyuz/Desktop/webpagedesign/index8.html"><li>Arch Enemy</li></a>
+    </ul>
+  </div>
+</nav>
+   
+
+
+  <div class="grid1">
+<img class="one"  src="IMG1copy.jpg"  alt="" />
+      </div>
+        <div class="container1">
+
+        <p class="p1">Born in Nepal on the annapurna peak plot, <br>His father is Ice King who ruled the Ice kingdom. </p>
+    </div>
+
+    <div class="grid2">
+
+  <img class="two" src="IMG2%E7%9A%84%E5%89%AF%E6%9C%AC.jpg"  />
+    </div>
+    
+    
+    
+    <div class="grid3">
+
+              <img  class="three"  src="IMG3%E7%9A%84%E5%89%AF%E6%9C%AC.jpg"  alt="" />
+    </div>
+    <div class="container2">
+    <p class="p2">His father died in a battle with the <br>King of fire when he was a child.  </p>
+        </div>
+    
+    
+        <div class="grid4">
+
+     <img class="four"  src="IMG4.jpg" alt="" />
+    </div>
+    <div class="container3">
+        <p class="p6">The Ice kingdom was completely destroyed after that fight.<br>After experiencing family changes,<br> he has been withdrawn since childhood.<br></p>
+        </div>
+    
+        
+    <div class="container4">
+    
+    <p class="p3">
+    When his mood is stable,<br>he is silent and does not talk much. <br>When his mood erupts, he likes to destroy things.</p>
+    </div>
+        <div class="grid5">
+
+
+<img class="five"  src="IMG5%E7%9A%84%E5%89%AF%E6%9C%AC.jpg"  alt="" />
+    </div>
+    
+        <div class="grid6">
+
+  <img class="six"  src="collage7thinking.jpg" alt="" />
+    </div>
+     
+              
+                  
+
+
+
+    
+
+
+  
+    <div class="container5">
+    <p class="p5">His parents gave him the super power<br> to have the king's talent, He vowed<br> to rebuild the ice kingdom, and <br>revenge for his parents.</p>
+        </div>
+    
+   
+
+
+
+
+
+</body>
+
+</html>
